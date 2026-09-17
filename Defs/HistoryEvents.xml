@@ -1,0 +1,6 @@
+<Defs>
+  <HistoryEventDef>
+    <defName>BED_ShotDownShip</defName>
+    <label>shot down an orbital trader ship</label>
+  </HistoryEventDef>
+</Defs>
