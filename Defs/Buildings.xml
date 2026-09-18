@@ -6,7 +6,7 @@
     <thingClass>Building</thingClass>
     <graphicData>
       <texPath>placeholderpng</texPath>
-      <graphicClass>Graphic_Multi</graphicClass>
+      <graphicClass>Graphic_Single</graphicClass>
       <drawSize>(2,2)</drawSize>
       <damageData>
         <rect>(0,0,3,1.8)</rect>
@@ -37,7 +37,7 @@
       <Steel>120</Steel>
       <ComponentIndustrial>4</ComponentIndustrial>
     </costList>
-    <defaultPlacingRot>South</defaultPlacingRot>
+    <defaultPlacingRot>North</defaultPlacingRot>
     <interactionCellOffset>(0,0,2)</interactionCellOffset>
     <hasInteractionCell>true</hasInteractionCell>
     <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>

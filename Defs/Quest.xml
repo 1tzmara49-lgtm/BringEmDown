@@ -36,32 +36,26 @@
     </questDescriptionRules>
     <questSubjectRules>
       <rulesStrings>
-        <li>subject->bandit camps</li>
-        <li>subject->outlaws</li>
-        <li>subject->raider sightings</li>
-
-        <li>questMapFeature->small camp</li>
-        <li>questMapFeature->bandit outpost</li>
-        <li>questMapFeature->raider encampment</li>
+        <li>questMapFeature->crash landed ship</li>
 
         <li>questMapText->dangerous folk</li>
-        <li>questMapText->camp loot</li>
+        <li>questMapText->cargo loot</li>
         <li>questMapText->trespassers get skinned</li>
         <li>questMapText->traders beware - outlaws</li>
       </rulesStrings>
     </questSubjectRules>
     <root Class="QuestNode_Sequence">
       <nodes>
-        <li Class="QuestNode_SubScript">
+        <!-- <li Class="QuestNode_SubScript">
           <def>Util_RandomizePointsChallengeRating</def>
           <parms>
             <pointsFactorTwoStar>1.5</pointsFactorTwoStar>
             <pointsFactorThreeStar>2</pointsFactorThreeStar>
           </parms>
-        </li>
-        <li Class="QuestNode_SubScript">
+        </li> -->
+        <!-- <li Class="QuestNode_SubScript">
           <def>Util_AdjustPointsForDistantFight</def>
-        </li>
+        </li> -->
 
         <li Class="QuestNode_GetMap">
           <canBeSpace>true</canBeSpace>
@@ -132,14 +126,14 @@
         <li Class="QuestNode_WorldObjectTimeout">
           <worldObject>$site</worldObject>
           <isQuestTimeout>true</isQuestTimeout>
-          <delayTicks>$(randInt(25,35)*60000)</delayTicks>
+          <delayTicks>$(randInt(25,35)*10000)</delayTicks>
           <inSignalDisable>site.MapGenerated</inSignalDisable>
           <destroyOnCleanup>true</destroyOnCleanup>
           <node Class="QuestNode_Sequence">
             <nodes>
               <li Class="QuestNode_Letter">
                 <label TKey="LetterLabelQuestExpired">Quest expired: [resolvedQuestName]</label>
-                <text TKey="LetterTextQuestExpired">The bandit camp has packed up and moved on. The quest [resolvedQuestName] has expired.</text>
+                <text TKey="LetterTextQuestExpired">The crashlanded traders have been evacuated and the cargo was salvaged. The quest [resolvedQuestName] has expired.</text>
               </li>
               <li Class="QuestNode_End">
                 <outcome>Fail</outcome>
@@ -149,7 +143,7 @@
         </li>
         <li Class="QuestNode_Letter">
             <label TKey="LetterLabelQuestExpired">Orbital ship crashed</label>
-            <text TKey="LetterTextQuestExpired">As fire rains down from the sky, you see as a cargo cluster plummets down to the ground not so far away from your location. \n\nYou can go and claim your spoils if you manage to defeat the surviving crew members.</text>
+            <text TKey="LetterTextQuestExpired">As fire and debirs rains down from the sky, you see as a cargo cluster plummet down to the ground not so far away from your location. \n\nYou can go and claim the spoils if you manage to defeat the surviving crew members.</text>
             <letterDef>PositiveEvent</letterDef>
             <lookTargets>$site</lookTargets>
         </li>
@@ -160,7 +154,7 @@
             <nodes>
               <li Class="QuestNode_Letter">
                 <label TKey="LetterLabelQuestFailed">Quest failed: [resolvedQuestName]</label>
-                <text TKey="LetterTextQuestFailed">After being discovered, the bandit camp has dispersed. The quest [resolvedQuestName] has ended.</text>
+                <text TKey="LetterTextQuestFailed">After being discovered, the crashed traders have called for priority evacuation and left. The quest [resolvedQuestName] has ended.</text>
               </li>
               <li Class="QuestNode_End">
                 <outcome>Fail</outcome>

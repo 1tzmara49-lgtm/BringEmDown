@@ -2,7 +2,7 @@
   <SitePartDef Name="BED_CrashedShip">
     <defName>BED_CrashedShip</defName>
     <label>crashed ship</label>
-    <description>A small, guarded outpost.</description>
+    <description>A small chunk of a large trader ship.</description>
     <workerClass>SitePartWorker_Outpost</workerClass>
     <siteTexture>World/WorldObjects/Sites/Outpost</siteTexture>
     <expandingIconTexture>World/WorldObjects/Expanding/Sites/Outpost</expandingIconTexture>
@@ -11,20 +11,11 @@
     <requiresFaction>true</requiresFaction>
     <approachOrderString>Attack {0}</approachOrderString>
     <approachingReportString>Attacking {0}.</approachingReportString>
-    <arrivedLetter>There is an enemy outpost in this area.</arrivedLetter>
+    <arrivedLetter>There is ship debris in this area.</arrivedLetter>
     <arrivedLetterDef>NegativeEvent</arrivedLetterDef>
     <wantsThreatPoints>true</wantsThreatPoints>
     <gravShipsCanLandOn>true</gravShipsCanLandOn>
     <minThreatPoints>300</minThreatPoints>
-    <tags>
-      <li>Outpost</li>
-      <li>MineralScannerPreciousLumpThreat</li>
-      <li>ItemStashQuestThreat</li>
-      <li>DownedRefugeeQuestThreat</li>
-      <li>PrisonerRescueQuestThreat</li>
-      <li>QuestActiveThreatDefense</li>
-      <li>QuestActiveThreatDefenseNoHidden</li>
-    </tags>
     <excludesTags>
       <li>MechCluster</li>
       <li>MechClusterForceNoConditionCauser</li>
@@ -32,4 +23,31 @@
       <li>Manhunters</li>
     </excludesTags>
   </SitePartDef>
+
+  <GenStepDef>
+    <defName>BED_GenStep_ScatterSteelSlag</defName>
+    <linkWithSite>BED_CrashedShip</linkWithSite>
+    <order>480</order>
+    <genStep Class="GenStep_ScatterThings">
+      <thingDef>ChunkSlagSteel</thingDef>
+      <countPer10kCellsRange>10.0~20.0</countPer10kCellsRange>
+    </genStep>
+  </GenStepDef>
+
+  <GenStepDef>
+    <defName>BED_GenStep_ScatterShipChunks</defName>
+    <linkWithSite>BED_CrashedShip</linkWithSite>
+    <order>500</order>
+    <genStep Class="GenStep_ScatterThings">
+      <thingDef>ShipChunk</thingDef>
+      <countPer10kCellsRange>5.0~10.0</countPer10kCellsRange>
+    </genStep>
+  </GenStepDef>
+
+  <GenStepDef>
+    <defName>BED_Generate_Survivors</defName>
+    <linkWithSite>BED_CrashedShip</linkWithSite>
+    <order>550</order>
+    <genStep Class="BringEmDown.GenerateSurvivors">
+  </GenStepDef>
 </Defs>
