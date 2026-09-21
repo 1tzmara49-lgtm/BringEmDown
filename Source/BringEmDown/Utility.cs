@@ -47,5 +47,21 @@ namespace BringEmDown
             }
             return goods;
         }
+
+        public static float GetValueFromList(List<Thing> list)
+        {
+            float totalValue = 0;
+            foreach (Thing thing in list)
+            {
+                totalValue += thing.MarketValue;
+            }
+            if (BringEmDownMod.settings.advancedLogging)
+            {
+                Log.Message("[Bring Em Down] === Get Value From List ===");
+                Log.Message($"Goods count {list.Count()}");
+                Log.Message($"Total value {totalValue}");
+            }
+            return totalValue;
+        }
     }
 }

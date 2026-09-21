@@ -22,6 +22,9 @@
       <li>SleepingMechanoids</li>
       <li>Manhunters</li>
     </excludesTags>
+    <tags>
+      <li>BED_Crashed_Trader</li>
+    </tags>
   </SitePartDef>
 
   <GenStepDef>
@@ -45,9 +48,24 @@
   </GenStepDef>
 
   <GenStepDef>
-    <defName>BED_Generate_Survivors</defName>
+    <defName>BED_GenStep_SpawnSurvivors</defName>
     <linkWithSite>BED_CrashedShip</linkWithSite>
-    <order>550</order>
-    <genStep Class="BringEmDown.GenerateSurvivors">
+    <order>400</order>
+    <genStep Class="BringEmDown.GenerateSurvivors" />
   </GenStepDef>
+
+  <!-- <GenStepDef>
+    <defName>Outpost2</defName>
+    <linkWithSite>BED_CrashedShip</linkWithSite>
+    <order>400</order>
+    <genStep Class="GenStep_Outpost"/>
+  </GenStepDef>
+
+  <GenStepDef>
+    <defName>OutpostPower2</defName>
+    <linkWithSite>BED_CrashedShip</linkWithSite>
+    <order>401</order>
+    <genStep Class="GenStep_Power"/>
+  </GenStepDef> -->
+
 </Defs>

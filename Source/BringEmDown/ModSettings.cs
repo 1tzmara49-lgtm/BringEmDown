@@ -9,11 +9,9 @@ namespace BringEmDown
 {
     public class BringEmDownSettings : ModSettings
     {
-        // How much of the loot is discarded when the site is generated. 0f - no loot (why) 1f - all the loot (awesome)
         public float cargoLossPercentage = 0.5f;
         public bool advancedLogging = false;
 
-        // Range settings for site gen. Default : 5 - 10 tiles
         public int minDistance = 5;
         public int maxDistance = 10;
         public override void ExposeData()

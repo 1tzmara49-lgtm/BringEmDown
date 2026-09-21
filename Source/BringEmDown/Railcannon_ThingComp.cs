@@ -83,10 +83,8 @@ namespace BringEmDown
 
             Map map = parent.Map;
 
-            // obliterate the targeted ship
             map.passingShipManager.RemoveShip(currentTarget);
 
-            //generate a slate for the quest w the loot and the faction
             Slate slate = new Slate();
 
             Faction faction = currentTarget?.Faction;
@@ -95,8 +93,11 @@ namespace BringEmDown
                 Faction.OfPlayer.TryAffectGoodwillWith(faction, -100, canSendMessage: true, canSendHostilityLetter: true, reason: reason);
             }
 
+            List<Thing> finalGoods = RailgunUtility.GetGoods(currentTarget);
+
             slate.Set("targetFaction", faction);
-            slate.Set("thingsToScatter", RailgunUtility.GetGoods(currentTarget));
+            slate.Set("thingsToScatter", finalGoods);
+            slate.Set("totalValue", RailgunUtility.GetValueFromList(finalGoods));
 
             QuestScriptDef questDef = DefDatabase<QuestScriptDef>.GetNamed("BED_Crashed_Trader");
             QuestUtility.GenerateQuestAndMakeAvailable(questDef, slate);
