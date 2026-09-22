@@ -52,7 +52,7 @@ namespace BringEmDown
             Command_Action fire_railcannon = new Command_Action
             {
                 defaultLabel = "Fire railcannon",
-                defaultDesc = "Shoot the orbital railcannon at the selected target ship. This will result in the ship falling down somewhere near your base with all it's cargo.",
+                defaultDesc = "Shoot the orbital railcannon at the selected target ship. This will result in the ship falling down somewhere near your base with all it's cargo. This will anger the orbital trader's faction.",
                 action = delegate
                 {
                     FireRailcannon();

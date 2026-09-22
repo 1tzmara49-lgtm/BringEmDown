@@ -1,4 +1,6 @@
 ﻿using RimWorld;
+using RimWorld.Planet;
+using RimWorld.QuestGen;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +11,24 @@ using Verse.AI.Group;
 
 namespace BringEmDown
 {
+    public class ScatterGoods : GenStep
+    {
+        public override int SeedPart => 69696969;
+        public override void Generate(Map map, GenStepParams parms)
+        {
+            if (!RCellFinder.TryFindRandomCellNearTheCenterOfTheMapWith(
+                            (IntVec3 c) => c.Standable(map) && !c.Fogged(map) && c.GetRoom(map).TouchesMapEdge == false,
+                            map, out IntVec3 defendCenter))
+            {
+                defendCenter = map.Center;
+            }
+
+            CrashMapParent mapParent = map.Parent as CrashMapParent;
+            foreach (Thing thing in mapParent.thingsToScatter) ;
+
+
+        }
+    }
     public class GenerateSurvivors : GenStep
     {
         public override int SeedPart => 84729185;
@@ -49,7 +69,7 @@ namespace BringEmDown
 
             foreach (Pawn pawn in pawns)
             {
-                IntVec3 spawnLoc = CellFinder.RandomClosewalkCellNear(defendCenter, map, 10);
+                IntVec3 spawnLoc = CellFinder.RandomClosewalkCellNear(defendCenter, map, 20);
                 GenSpawn.Spawn(pawn, spawnLoc, map);
                 if (BringEmDownMod.settings.advancedLogging)
                 {
