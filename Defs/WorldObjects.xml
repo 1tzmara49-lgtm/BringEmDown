@@ -1,0 +1,68 @@
+<Defs>
+  <WorldObjectDef ParentName="Site">
+    <defName>BED_CrashedShip</defName>
+    <label>crashed ship</label>
+    <worldObjectClass>BringEmDown.CrashMapParent</worldObjectClass>
+    <texture>placeholderpng</texture>
+    <!-- <expandingIcon>true</expandingIcon>
+    <expandingIconPriority>70</expandingIconPriority>
+    <comps>
+      <li Class="WorldObjectCompProperties_Timeout" />
+      <li Class="WorldObjectCompProperties_DefeatAllEnemiesQuest" />
+      <li Class="WorldObjectCompProperties_ItemStashContents" />
+      <li Class="WorldObjectCompProperties_DownedRefugee" />
+      <li Class="WorldObjectCompProperties_PrisonerWillingToJoin" />
+      <li Class="WorldObjectCompProperties_FormCaravan" />
+      <li Class="WorldObjectCompProperties_TimedDetectionRaids" />
+      <li Class="WorldObjectCompProperties_EnterCooldown" />
+      <li Class="WorldObjectCompProperties_TimedMakeFactionHostile" />
+    </comps>
+    <IncidentTargetTags>
+      <li>Map_Misc</li>
+    </IncidentTargetTags> -->
+    <mapGenerator>BED_Ship_mapGenerator</mapGenerator>
+    <canBePlayerHome>false</canBePlayerHome>
+  </WorldObjectDef>
+
+    <MapGeneratorDef ParentName="MapCommonBase">
+        <defName>BED_Ship_mapGenerator</defName>
+        <label>custom map generator</label>
+        <genSteps>
+            <li>BED_GenStep_ScatterSteelSlag</li>
+            <li>BED_GenStep_ScatterShipChunks</li>
+            <li>BED_GenStep_SpawnSurvivors</li>
+            <li>BED_GenStep_ScatterGoods</li>
+        </genSteps>
+    </MapGeneratorDef>
+
+  <GenStepDef>  
+    <defName>BED_GenStep_ScatterSteelSlag</defName>
+    <order>480</order>
+    <genStep Class="GenStep_ScatterThings">
+      <thingDef>ChunkSlagSteel</thingDef>
+      <countPer10kCellsRange>10.0~20.0</countPer10kCellsRange>
+    </genStep>
+  </GenStepDef>
+
+  <GenStepDef>
+    <defName>BED_GenStep_ScatterShipChunks</defName>
+    <order>500</order>
+    <genStep Class="GenStep_ScatterThings">
+      <thingDef>ShipChunk</thingDef>
+      <countPer10kCellsRange>5.0~10.0</countPer10kCellsRange>
+    </genStep>
+  </GenStepDef>
+
+  <GenStepDef>
+    <defName>BED_GenStep_SpawnSurvivors</defName>
+    <order>400</order>
+    <genStep Class="BringEmDown.GenerateSurvivors" />
+  </GenStepDef>
+
+  <GenStepDef>
+    <defName>BED_GenStep_ScatterGoods</defName>
+    <order>510</order>
+    <genStep Class="BringEmDown.ScatterGoods" />
+  </GenStepDef>
+
+</Defs>
