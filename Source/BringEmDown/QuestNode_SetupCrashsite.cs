@@ -15,7 +15,11 @@ namespace BringEmDown
 
     public class QuestNode_SetupCrashsite : QuestNode
     {
-        public WorldObjectDef worldObjectDef;
+
+        [NoTranslate]
+        public SlateRef<string> storeAs;
+
+        public WorldObjectDef worldObjectDef;   
 
         private static readonly IntRange TimeoutDays = new IntRange(5, 10);
         protected override bool TestRunInt(Slate slate)
@@ -43,15 +47,14 @@ namespace BringEmDown
             slate.Set("worldObject", crashMapParent);
             quest.SpawnWorldObject(crashMapParent);
 
-
-            string inSignal = QuestGenUtility.HardcodedSignalWithQuestID("worldObject.MapRemoved");
-            int delayTicks = TimeoutDays.RandomInRange * 60000;
-            quest.WorldObjectTimeout(crashMapParent, delayTicks);
-            quest.Delay(delayTicks, delegate
-            {
-                QuestGen_End.End(quest, QuestEndOutcome.Fail);
-            });
-            quest.End(QuestEndOutcome.Success, 0, null, inSignal);
+            //string inSignal = QuestGenUtility.HardcodedSignalWithQuestID("worldObject.MapRemoved");
+            //int delayTicks = TimeoutDays.RandomInRange * 60000;
+            //quest.WorldObjectTimeout(crashMapParent, delayTicks);
+            //quest.Delay(delayTicks, delegate
+            //{
+            //    QuestGen_End.End(quest, QuestEndOutcome.Fail);
+            //});
+            //quest.End(QuestEndOutcome.Success, 0, null, inSignal);
 
 
         }

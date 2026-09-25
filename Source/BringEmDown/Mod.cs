@@ -31,6 +31,8 @@ namespace BringEmDown
 
             listing.Label($"Cargo loss percentage: {settings.cargoLossPercentage*100:F1}%");
             settings.cargoLossPercentage = listing.Slider(settings.cargoLossPercentage, 0f, 1f);
+            listing.Label($"Enemy budget modifier: {settings.survivorPointModifier:F1}");
+            settings.survivorPointModifier = listing.Slider(settings.survivorPointModifier, 0.1f, 2f);
             listing.Gap();
 
             listing.CheckboxLabeled($"[DEV] More logging", ref settings.advancedLogging, "Enables the logging, WILL clutter up the log window so use carefully.");

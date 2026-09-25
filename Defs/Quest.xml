@@ -17,16 +17,16 @@
     </questNameRules>
     <questDescriptionRules>
       <rulesStrings>
-        <li>questDescription->You have shot down an orbital trader ship of [siteFaction_name]. The camp contains hostile [siteFaction_pawnsPlural], but you don't know what defenses they have.</li>
+        <li>questDescription->You have shot down an orbital trader ship of [siteFaction_name]. The crash contains hostile [siteFaction_pawnsPlural]. They are heavily armed, prepare for a difficult battle.</li>
       </rulesStrings>
     </questDescriptionRules>
     <questSubjectRules>
       <rulesStrings>
         <li>questMapFeature->crash landed ship</li>
-        <li>questMapText->dangerous folk</li>
+        <!-- <li>questMapText->dangerous folk</li>
         <li>questMapText->cargo loot</li>
         <li>questMapText->trespassers get skinned</li>
-        <li>questMapText->traders beware - outlaws</li>
+        <li>questMapText->traders beware - outlaws</li> -->
       </rulesStrings>
     </questSubjectRules>
 
@@ -94,8 +94,15 @@
             <!-- Faction is defined in | Faction siteFaction = slate.Get<Faction>("siteFaction"); -->
         </li>
 
+        <li Class="QuestNode_Letter">
+          <letterDef>PositiveEvent</letterDef>
+          <label>[resolvedQuestName]</label>
+          <text>A trader ship has crashed nearby.</text>
+          <lookTargets>$worldObject</lookTargets> 
+        </li>
+
         <li Class="QuestNode_WorldObjectTimeout">
-          <worldObject>$site</worldObject>
+          <worldObject>$worldObject</worldObject>
           <isQuestTimeout>true</isQuestTimeout>
           <delayTicks>$(randInt(12,28)*60000)</delayTicks>
           <inSignalDisable>site.MapGenerated</inSignalDisable>
@@ -104,7 +111,7 @@
             <nodes>
               <li Class="QuestNode_Letter">
                 <label TKey="LetterLabelQuestExpired">Quest expired: [resolvedQuestName]</label>
-                <text TKey="LetterTextQuestExpired">The bandit camp has packed up and moved on. The quest [resolvedQuestName] has expired.</text>
+                <text TKey="LetterTextQuestExpired">The crashed trade ship has evacuated and cargo was salvaged. The quest [resolvedQuestName] has expired.</text>
               </li>
               <li Class="QuestNode_End">
                 <outcome>Fail</outcome>
@@ -115,12 +122,12 @@
 
         <!-- If we enter and leave, the map is destroyed. Fail the quest. -->
         <li Class="QuestNode_Signal">
-          <inSignal>site.Destroyed</inSignal>
+          <inSignal>worldObject.Destroyed</inSignal>
           <node Class="QuestNode_Sequence">
             <nodes>
               <li Class="QuestNode_Letter">
                 <label TKey="LetterLabelQuestFailed">Quest failed: [resolvedQuestName]</label>
-                <text TKey="LetterTextQuestFailed">After being discovered, the bandit camp has dispersed. The quest [resolvedQuestName] has ended.</text>
+                <text TKey="LetterTextQuestFailed">After being discovered, the traders have requested priority evacuation and left. The quest [resolvedQuestName] has ended.</text>
               </li>
               <li Class="QuestNode_End">
                 <outcome>Fail</outcome>
@@ -134,7 +141,7 @@
           <node Class="QuestNode_Sequence">
             <nodes>
               <li Class="QuestNode_Notify_PlayerRaidedSomeone">
-                <getRaidersFromMapParent>$site</getRaidersFromMapParent>
+                <getRaidersFromMapParent>$worldObject</getRaidersFromMapParent>
               </li>
             </nodes>
           </node>

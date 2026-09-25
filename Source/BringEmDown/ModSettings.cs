@@ -10,6 +10,7 @@ namespace BringEmDown
     public class BringEmDownSettings : ModSettings
     {
         public float cargoLossPercentage = 0.5f;
+        public float survivorPointModifier = 0.5f;
         public bool advancedLogging = false;
 
         public int minDistance = 5;
@@ -19,6 +20,7 @@ namespace BringEmDown
             base.ExposeData();
 
             Scribe_Values.Look(ref cargoLossPercentage, "cargoLossPercentage", 0.5f);
+            Scribe_Values.Look(ref survivorPointModifier, "survivorPointModifier", 0.5f);
             Scribe_Values.Look(ref advancedLogging, "advancedLogging", false);
 
             Scribe_Values.Look(ref minDistance, "minDistance", 5);

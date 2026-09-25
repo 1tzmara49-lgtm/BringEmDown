@@ -49,6 +49,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CrashSiteUtility.cs" />
     <Compile Include="DefOf.cs" />
     <Compile Include="GenSteps.cs" />
     <Compile Include="MapParent_Crashsite.cs" />

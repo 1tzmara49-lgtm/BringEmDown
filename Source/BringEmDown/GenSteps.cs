@@ -57,7 +57,7 @@ namespace BringEmDown
                 groupKind = PawnGroupKindDefOf.Combat,
                 tile = map.Tile,
                 faction = faction,
-                points = points,
+                points = points * BringEmDownMod.settings.survivorPointModifier,
             };
             if (BringEmDownMod.settings.advancedLogging)
             {
