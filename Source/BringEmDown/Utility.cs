@@ -17,6 +17,7 @@ namespace BringEmDown
             List<TradeShip> activeTraders = map.passingShipManager.passingShips
                                                     .OfType<TradeShip>()
                                                     .ToList();
+            activeTraders.RemoveAll(ship => ship.Faction.def != null && BEDDefOf.BED_FactionBlacklist.blacklistedFactionDefs.Contains(ship.Faction.def));
             return activeTraders;
         }
         public static List<Thing> GetGoods(TradeShip ship)

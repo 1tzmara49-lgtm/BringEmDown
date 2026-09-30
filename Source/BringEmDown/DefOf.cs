@@ -13,6 +13,8 @@ namespace BringEmDown
     {
         public static HistoryEventDef BED_ShotDownShip;
 
+        public static FactionBlacklist BED_FactionBlacklist;
+
         static BEDDefOf()
         {
             DefOfHelper.EnsureInitializedInCtor(typeof(BEDDefOf));

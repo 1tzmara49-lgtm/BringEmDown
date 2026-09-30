@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="CrashSiteUtility.cs" />
     <Compile Include="DefOf.cs" />
+    <Compile Include="FactionBlacklist.cs" />
     <Compile Include="GenSteps.cs" />
     <Compile Include="MapParent_Crashsite.cs" />
     <Compile Include="Mod.cs" />
@@ -58,6 +59,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QuestNode_SetupCrashsite.cs" />
     <Compile Include="Railcannon_ThingComp.cs" />
+    <Compile Include="ThingClass_BEDCargoCrate.cs" />
     <Compile Include="Utility.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

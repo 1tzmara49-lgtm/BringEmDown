@@ -34,10 +34,12 @@ namespace BringEmDown
         public override int SeedPart => 84729185;
 
         public static readonly IntVec3 WanderRadius = new IntVec3();
+
+        TraverseParms traverseParms = TraverseParms.For(TraverseMode.ByPawn);
         public override void Generate(Map map, GenStepParams parms)
         {
             if (!RCellFinder.TryFindRandomCellNearTheCenterOfTheMapWith(
-                            (IntVec3 c) => c.Standable(map) && !c.Fogged(map) && c.GetRoom(map).TouchesMapEdge == false,
+                            (IntVec3 c) => c.Walkable(map) && map.reachability.CanReachUnfogged(c, traverseParms) && !c.Fogged(map) && c.GetRoom(map).TouchesMapEdge == false,
                             map, out IntVec3 defendCenter))
             {
                 defendCenter = map.Center;
@@ -50,7 +52,15 @@ namespace BringEmDown
 
             if (faction == null) return;
 
-            float points = parms.sitePart != null ? parms.sitePart.parms.threatPoints : 10000;
+            CrashMapParent mapParent = map.Parent as CrashMapParent;
+            List<Thing> thingsToScater = mapParent.thingsToScatter;
+
+            float points = RailgunUtility.GetValueFromList(thingsToScater);
+
+            //if (faction.def.pawnGroupMakers != null && faction.def.pawnGroupMakers.NullOrEmpty())
+            //{
+            //    faction = FactionDefOf.TradersGuild;
+            //}
 
             PawnGroupMakerParms pawnParms = new PawnGroupMakerParms
             {
@@ -59,21 +69,43 @@ namespace BringEmDown
                 faction = faction,
                 points = points * BringEmDownMod.settings.survivorPointModifier,
             };
+            bool preserveFaction = false;
+            if (PawnGroupMakerUtility.CanGenerateAnyNormalGroup(pawnParms.faction, pawnParms.points))
+            {
+                if (BringEmDownMod.settings.advancedLogging) Log.Message("[Bring em Down] CanGenerateAnyNormalGroup returned true. Proceeding with normal generation");
+            }
+            else
+            {
+                if (BringEmDownMod.settings.advancedLogging) Log.Message("[Bring em Down] CanGenerateAnyNormalGroup returned false. Using fallback parms");
+                pawnParms = new PawnGroupMakerParms
+                {
+                    groupKind = PawnGroupKindDefOf.Combat,
+                    tile = map.Tile,
+                    faction = Find.FactionManager.FirstFactionOfDef(FactionDefOf.AncientsHostile),
+                    points = points * BringEmDownMod.settings.survivorPointModifier,
+                };
+                preserveFaction = true;
+               
+            }
             if (BringEmDownMod.settings.advancedLogging)
             {
                 Log.Message($"Generating survivors | faction : {faction.Name}, points : {points}");
-                }
+            }
             List<Pawn> pawns = PawnGroupMakerUtility.GeneratePawns(pawnParms).ToList();
-
             if (!pawns.Any()) return;
 
             foreach (Pawn pawn in pawns)
             {
                 IntVec3 spawnLoc = CellFinder.RandomClosewalkCellNear(defendCenter, map, 20);
+                if (!spawnLoc.IsValid) spawnLoc = defendCenter;
+                if (preserveFaction)
+                {
+                    pawn.SetFaction(faction);
+                }
                 GenSpawn.Spawn(pawn, spawnLoc, map);
                 if (BringEmDownMod.settings.advancedLogging)
                 {
-                    Log.Message($"Placing pawn: {pawn} with worth: {pawn.MarketValue}");
+                    Log.Message($"Placing pawn: {pawn} with worth: {pawn.MarketValue} of faction: {pawn.Faction}");
                 }
 
             }

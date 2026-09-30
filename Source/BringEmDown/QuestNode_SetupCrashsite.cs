@@ -44,19 +44,10 @@ namespace BringEmDown
                 crashMapParent.SetFaction(siteFaction);
             }
 
+            QuestUtility.AddQuestTag(ref crashMapParent.questTags, "worldObject");
+
             slate.Set("worldObject", crashMapParent);
             quest.SpawnWorldObject(crashMapParent);
-
-            //string inSignal = QuestGenUtility.HardcodedSignalWithQuestID("worldObject.MapRemoved");
-            //int delayTicks = TimeoutDays.RandomInRange * 60000;
-            //quest.WorldObjectTimeout(crashMapParent, delayTicks);
-            //quest.Delay(delayTicks, delegate
-            //{
-            //    QuestGen_End.End(quest, QuestEndOutcome.Fail);
-            //});
-            //quest.End(QuestEndOutcome.Success, 0, null, inSignal);
-
-
         }
     }
 }

@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
 using Verse;
+using Verse.Noise;
 
 namespace BringEmDown
 {
@@ -20,7 +21,21 @@ namespace BringEmDown
         public override void ExposeData()
         {
             base.ExposeData();
-            Scribe_Collections.Look(ref thingsToScatter, "thingsToScatter");
+            Scribe_Collections.Look(ref thingsToScatter, "thingsToScatter", LookMode.Deep);
+        }
+
+        // remove if no player pawns left
+
+        public override bool ShouldRemoveMapNow(out bool alsoRemoveWorldObject)
+        {
+            if (!Map.mapPawns.AnyColonistSpawned)
+            {
+                alsoRemoveWorldObject = true;
+                return true;
+            }
+
+            alsoRemoveWorldObject = false;
+            return false;
         }
 
         // attack gizmos tomfoolery
@@ -70,6 +85,31 @@ namespace BringEmDown
                 base.ExposeData();
                 Scribe_References.Look(ref site, "site");
             }
+        }
+
+        // checking for dead enemies
+
+        protected override void TickInterval(int delta)
+        {
+            base.TickInterval(delta);
+
+            if (Find.TickManager.TicksGame % 125 != 0)
+                return;
+
+            if (this.Map == null) return;
+
+            if (!GenHostility.AnyHostileActiveThreatToPlayer(this.Map, true))
+            {
+                if (BringEmDownMod.settings.advancedLogging) Log.Message("All enemies defeated, completing the quest");
+                QuestUtility.SendQuestTargetSignals(
+                    Map.Parent.questTags,
+                    "AllEnemiesDefeated",
+                    Map.Parent.Named("SUBJECT")
+                );
+
+            }
+
+
         }
     }
 }

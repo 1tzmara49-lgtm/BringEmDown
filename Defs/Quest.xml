@@ -32,15 +32,6 @@
 
     <root Class="QuestNode_Sequence">
       <nodes>
-        <li Class="QuestNode_Set">
-          <name>points</name>
-          <value>$totalValue</value>
-        </li>
-        <li Class="QuestNode_Set">
-          <name>sitePoints</name>
-          <value>$totalValue</value>
-        </li>
-
         <li Class="QuestNode_SubScript">
           <def>Util_RandomizePointsChallengeRating</def>
           <parms>
@@ -137,7 +128,7 @@
         </li>
 
         <li Class="QuestNode_Signal">
-          <inSignal>site.AllEnemiesDefeated</inSignal>
+          <inSignal>worldObject.AllEnemiesDefeated</inSignal>
           <node Class="QuestNode_Sequence">
             <nodes>
               <li Class="QuestNode_Notify_PlayerRaidedSomeone">
@@ -147,7 +138,7 @@
           </node>
         </li>
         <li Class="QuestNode_End">
-          <inSignal>site.AllEnemiesDefeated</inSignal>
+          <inSignal>worldObject.AllEnemiesDefeated</inSignal>
           <outcome>Success</outcome>
         </li>
       </nodes>

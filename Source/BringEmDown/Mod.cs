@@ -17,7 +17,7 @@ namespace BringEmDown
         public BringEmDownMod(ModContentPack content) : base(content)
         {
             settings = GetSettings<BringEmDownSettings>();
-            Log.Message("[Bring 'Em Down] Mod settings initialized successfully!");
+            Log.Message("[Bring 'Em Down] Mod settings initialized");
         }
         public override string SettingsCategory()
         {

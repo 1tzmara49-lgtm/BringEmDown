@@ -1,0 +1,13 @@
+<Defs>
+
+<!-- add your factions here if you don't want them to be targetable by the railcannon -->
+  <BringEmDown.FactionBlacklist>
+    <defName>BED_FactionBlacklist</defName>
+    <blacklistedFactionDefs>
+      <!-- for lore reasons since they're not actually in orbit or something-->
+      <li MayRequire="ariandel.miliraimperium">
+        Milira_Imperium
+      </li>
+    </blacklistedFactionDefs>
+  </BringEmDown.FactionBlacklist>
+</Defs>

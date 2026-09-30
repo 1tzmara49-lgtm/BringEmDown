@@ -12,6 +12,9 @@ using Verse;
 
 namespace BringEmDown
 {
+    // no idea why i made it a comp when it very much could just be a thingClass but i cant be bothered to rewrite ts atp.
+
+    // shouldn't cause a lot of performance issues anyway :shrug:
     public class RailcannonCompProps : CompProperties
     {
         public RailcannonCompProps()
@@ -97,7 +100,6 @@ namespace BringEmDown
 
             slate.Set("targetFaction", faction);
             slate.Set("thingsToScatter", finalGoods);
-            slate.Set("totalValue", RailgunUtility.GetValueFromList(finalGoods));
 
             QuestScriptDef questDef = DefDatabase<QuestScriptDef>.GetNamed("BED_Crashed_Trader");
             QuestUtility.GenerateQuestAndMakeAvailable(questDef, slate);
@@ -125,7 +127,6 @@ namespace BringEmDown
             foreach (TradeShip ship in availibleShips)
             {
                 TradeShip localShip = ship;
-
                 options.Add(new FloatMenuOption($"{localShip.name} ({localShip.def.label})", () =>
                 {
                     currentTarget = localShip;

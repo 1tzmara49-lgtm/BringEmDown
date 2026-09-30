@@ -3,7 +3,7 @@
     <defName>BED_OrbitalRailcannon</defName>
     <label>orbital railcannon</label>
     <description>TBD</description>
-    <thingClass>Building</thingClass>
+    <thingClass>Building_Crate</thingClass>
     <graphicData>
       <texPath>placeholderpng</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -61,5 +61,98 @@
       <li>MicroelectronicsBasics</li>
     </researchPrerequisites>
     <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
+  </ThingDef>
+
+  <!-- Cargo crates -->
+
+  <ThingDef ParentName="CrateBase">
+    <defName>BED_ExpensiveCargoCrate</defName>
+    <label>expensive cargo crate</label>
+    <description>A vacuum-sealed cargo crate for storing expensive artifacts and tech on trade ships on prolonged interstellar voyages. \n\nDesigned for maximum security, this crate will require quite a bit of hacking to get in.</description>
+    <thingClass>BringEmDown.BEDCargoCrate</thingClass>
+    <graphicData>
+      <texPath>Building/ExpensiveCargoCrate/ExpensiveCargoCrate_closed</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1,1)</drawSize>
+      <shadowData>
+        <volume>(0.8,0.25,0.8)</volume>
+      </shadowData>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>50</pathCost>
+    <blockWind>false</blockWind>
+    <castEdgeShadows>false</castEdgeShadows>
+    <fillPercent>0.5</fillPercent>
+    <canOverlapZones>false</canOverlapZones>
+    <statBases>
+      <MaxHitPoints>7500</MaxHitPoints>
+      <Flammability>0.6</Flammability>
+    </statBases>
+    <size>(1,1)</size>
+    <building>
+      <destroySound>BuildingDestroyed_Metal_Big</destroySound>
+    </building>
+    <defaultPlacingRot>North</defaultPlacingRot>
+    <hasInteractionCell>false</hasInteractionCell>
+    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+    <comps>
+      <li Class="CompProperties_EmptyStateGraphic">
+        <graphicData>
+          <texPath>Building/ExpensiveCargoCrate/ExpensiveCargoCrate_open</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+          <drawSize>(1,1)</drawSize>
+        </graphicData>
+      </li>
+      <li Class="CompProperties_Hackable">
+        <defence>50000</defence>
+        <effectHacking>HackingTerminal</effectHacking>
+        <notHackedInspectString>Hack to unlock the crate.</notHackedInspectString>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <!-- Large cargo container -->
+
+    <ThingDef ParentName="CrateBase">
+    <defName>BED_LargeCargoContanier</defName>
+    <label>large cargo crate</label>
+    <description>A generic shipping container for storing mid to low value cargo on prolonged interstellar voyages.</description>
+    <thingClass>Building_Crate</thingClass>
+    <graphicData>
+      <texPath>placeholderpng</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(2,4)</drawSize>
+      <shadowData>
+        <volume>(2,2,4)</volume>
+      </shadowData>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>50</pathCost>
+    <blockWind>true</blockWind>
+    <castEdgeShadows>true</castEdgeShadows>
+    <fillPercent>1.0</fillPercent>
+    <canOverlapZones>false</canOverlapZones>
+    <statBases>
+      <MaxHitPoints>5000</MaxHitPoints>
+      <Flammability>0.6</Flammability>
+    </statBases>
+    <size>(2,4)</size>
+    <building>
+      <destroySound>BuildingDestroyed_Metal_Big</destroySound>
+    </building>
+    <defaultPlacingRot>North</defaultPlacingRot>
+    <hasInteractionCell>false</hasInteractionCell>
+    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+    <comps>
+      <li Class="CompProperties_EmptyStateGraphic">
+        <graphicData>
+          <texPath>placeholderpng</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+          <drawSize>(2,4)</drawSize>
+        </graphicData>
+      </li>
+    </comps>
   </ThingDef>
 </Defs>
