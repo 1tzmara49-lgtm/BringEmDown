@@ -120,8 +120,9 @@
     <description>A generic shipping container for storing mid to low value cargo on prolonged interstellar voyages.</description>
     <thingClass>Building_Crate</thingClass>
     <graphicData>
-      <texPath>placeholderpng</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
+      <texPath>Building/LargeCargoCrate/cargoContainer_Closed</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
       <drawSize>(2,4)</drawSize>
       <shadowData>
         <volume>(2,2,4)</volume>
@@ -141,6 +142,7 @@
     <size>(2,4)</size>
     <building>
       <destroySound>BuildingDestroyed_Metal_Big</destroySound>
+      <paintable>true</paintable>
     </building>
     <defaultPlacingRot>North</defaultPlacingRot>
     <hasInteractionCell>false</hasInteractionCell>
@@ -148,9 +150,10 @@
     <comps>
       <li Class="CompProperties_EmptyStateGraphic">
         <graphicData>
-          <texPath>placeholderpng</texPath>
-          <graphicClass>Graphic_Single</graphicClass>
+          <texPath>Building/LargeCargoCrate/cargoContainer_Open</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
           <drawSize>(2,4)</drawSize>
+          <shaderType>CutoutComplex</shaderType>
         </graphicData>
       </li>
     </comps>
