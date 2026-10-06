@@ -4,7 +4,7 @@
   <BringEmDown.FactionBlacklist>
     <defName>BED_FactionBlacklist</defName>
     <blacklistedFactionDefs>
-      <!-- for lore reasons since they're not actually in orbit or something-->
+      <!-- for lore reasons since they're not actually in orbit or something, idk go ask shiori-->
       <li MayRequire="ariandel.miliraimperium">
         Milira_Imperium
       </li>

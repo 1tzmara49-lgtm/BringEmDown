@@ -7,7 +7,7 @@
       "RelativeMoniker": "D:0:0:{7922912B-DB47-47F7-8E01-E860B0C13E24}|BringEmDown.csproj|solutionrelative:thingclass_bedlargecargo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7922912B-DB47-47F7-8E01-E860B0C13E24}|BringEmDown.csproj|c:\\program files (x86)\\steam\\steamapps\\common\\rimworld\\mods\\bringemdown\\source\\bringemdown\\thingclass_bedcargocrate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7922912B-DB47-47F7-8E01-E860B0C13E24}|BringEmDown.csproj|C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\BringEmDown\\Source\\BringEmDown\\thingclass_bedcargocrate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7922912B-DB47-47F7-8E01-E860B0C13E24}|BringEmDown.csproj|solutionrelative:thingclass_bedcargocrate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -83,7 +83,7 @@
               "RelativeDocumentMoniker": "ThingClass_BEDLargeCargo.cs",
               "ToolTip": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\BringEmDown\\Source\\BringEmDown\\ThingClass_BEDLargeCargo.cs",
               "RelativeToolTip": "ThingClass_BEDLargeCargo.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAcwBUAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAA4wBkAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-06T10:59:34.464Z",
               "EditorCaption": ""
@@ -98,8 +98,7 @@
               "RelativeToolTip": "ThingClass_BEDCargoCrate.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-29T11:56:03.39Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-29T11:56:03.39Z"
             },
             {
               "$type": "Document",

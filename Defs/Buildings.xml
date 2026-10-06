@@ -140,6 +140,7 @@
     </statBases>
     <size>(3,5)</size>
     <building>
+      <openingStartedSound>BuildingDestroyed_Metal_Big</openingStartedSound>
       <destroySound>BuildingDestroyed_Metal_Big</destroySound>
       <paintable>true</paintable>
       <deconstructible>false</deconstructible>
@@ -159,11 +160,5 @@
         </graphicData>
       </li>
     </comps> -->
-
-  <modExtensions>
-    <li Class="MyMod.LargeCargoCrateExtension">
-      <openedTexPath>Building/LargeCargoCrate/cargoContainer_Open</openedTexPath>
-    </li>
-  </modExtensions>
   </ThingDef>
 </Defs>
