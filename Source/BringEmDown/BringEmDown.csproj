@@ -60,6 +60,7 @@
     <Compile Include="QuestNode_SetupCrashsite.cs" />
     <Compile Include="Railcannon_ThingComp.cs" />
     <Compile Include="ThingClass_BEDCargoCrate.cs" />
+    <Compile Include="ThingClass_BEDLargeCargo.cs" />
     <Compile Include="Utility.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

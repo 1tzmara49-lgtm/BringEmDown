@@ -114,48 +114,56 @@
 
   <!-- Large cargo container -->
 
-    <ThingDef ParentName="CrateBase">
+  <ThingDef ParentName="CrateBase">
     <defName>BED_LargeCargoContanier</defName>
     <label>large cargo crate</label>
     <description>A generic shipping container for storing mid to low value cargo on prolonged interstellar voyages.</description>
-    <thingClass>Building_Crate</thingClass>
+    <thingClass>BringEmDown.LargeCargoCrate</thingClass>
     <graphicData>
       <texPath>Building/LargeCargoCrate/cargoContainer_Closed</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
       <shaderType>CutoutComplex</shaderType>
-      <drawSize>(2,4)</drawSize>
+      <drawSize>(3,5)</drawSize>
       <shadowData>
         <volume>(2,2,4)</volume>
       </shadowData>
     </graphicData>
     <altitudeLayer>Building</altitudeLayer>
-    <passability>PassThroughOnly</passability>
+    <passability>Impassable</passability>
     <pathCost>50</pathCost>
     <blockWind>true</blockWind>
-    <castEdgeShadows>true</castEdgeShadows>
     <fillPercent>1.0</fillPercent>
     <canOverlapZones>false</canOverlapZones>
     <statBases>
       <MaxHitPoints>5000</MaxHitPoints>
       <Flammability>0.6</Flammability>
     </statBases>
-    <size>(2,4)</size>
+    <size>(3,5)</size>
     <building>
       <destroySound>BuildingDestroyed_Metal_Big</destroySound>
       <paintable>true</paintable>
+      <deconstructible>false</deconstructible>
+      <claimable>false</claimable>
+      <neverBuildable>true</neverBuildable>
     </building>
     <defaultPlacingRot>North</defaultPlacingRot>
     <hasInteractionCell>false</hasInteractionCell>
     <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
-    <comps>
+    <!-- <comps>
       <li Class="CompProperties_EmptyStateGraphic">
         <graphicData>
           <texPath>Building/LargeCargoCrate/cargoContainer_Open</texPath>
           <graphicClass>Graphic_Multi</graphicClass>
-          <drawSize>(2,4)</drawSize>
           <shaderType>CutoutComplex</shaderType>
+          <drawSize>(3,5)</drawSize>
         </graphicData>
       </li>
-    </comps>
+    </comps> -->
+
+  <modExtensions>
+    <li Class="MyMod.LargeCargoCrateExtension">
+      <openedTexPath>Building/LargeCargoCrate/cargoContainer_Open</openedTexPath>
+    </li>
+  </modExtensions>
   </ThingDef>
 </Defs>
