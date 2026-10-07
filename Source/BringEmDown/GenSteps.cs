@@ -24,7 +24,8 @@ namespace BringEmDown
             }
 
             CrashMapParent mapParent = map.Parent as CrashMapParent;
-            foreach (Thing thing in mapParent.thingsToScatter) Log.Message(thing.Label);
+            
+            
 
 
         }

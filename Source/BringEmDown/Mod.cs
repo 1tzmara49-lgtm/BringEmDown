@@ -35,6 +35,12 @@ namespace BringEmDown
             settings.survivorPointModifier = listing.Slider(settings.survivorPointModifier, 0.1f, 2f);
             listing.Gap();
 
+            settings.thresholdBuffer = settings.expensiveThreshold.ToString();
+
+            listing.Label($"Expensive item market value threshold");
+            listing.TextFieldNumeric<int>(ref settings.expensiveThreshold, ref settings.thresholdBuffer, 0, 99999);
+            listing.Gap();
+
             listing.CheckboxLabeled($"[DEV] More logging", ref settings.advancedLogging, "Enables the logging, WILL clutter up the log window so use carefully.");
             listing.GapLine();
 

@@ -9,11 +9,19 @@ namespace BringEmDown
 {
     public class BringEmDownSettings : ModSettings
     {
-        public float cargoLossPercentage = 0.5f;
-        public float survivorPointModifier = 0.5f;
-        public bool advancedLogging = false;
+        public float cargoLossPercentage = 0.5f; // Discards amount of cargo
+        public float survivorPointModifier = 0.5f; // Multiplies the survivor's pawngen budget by X
+        public bool advancedLogging = false; // Logging for debug, no gameplay effect
 
-        public int minDistance = 5;
+
+
+        public int expensiveThreshold = 700; // 700 being the value of an archite capsule
+        public string thresholdBuffer; // lil doodad the settings need
+
+
+        public int maxItemsPerCarge = 5; // Max amount of items a player can find in a cargo crate.
+
+        public int minDistance = 5; // pretty sure im not even using this
         public int maxDistance = 10;
         public override void ExposeData()
         {
@@ -22,6 +30,9 @@ namespace BringEmDown
             Scribe_Values.Look(ref cargoLossPercentage, "cargoLossPercentage", 0.5f);
             Scribe_Values.Look(ref survivorPointModifier, "survivorPointModifier", 0.5f);
             Scribe_Values.Look(ref advancedLogging, "advancedLogging", false);
+
+            Scribe_Values.Look(ref minDistance, "minDistance", 5);
+            Scribe_Values.Look(ref minDistance, "minDistance", 5);
 
             Scribe_Values.Look(ref minDistance, "minDistance", 5);
             Scribe_Values.Look(ref maxDistance, "maxDistance", 10);

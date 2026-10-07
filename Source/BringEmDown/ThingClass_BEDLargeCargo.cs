@@ -25,18 +25,5 @@ namespace BringEmDown
                 return base.Graphic;
             }
         }
-
-        // test for the graphics and openability. if i keep this in final release shoot me in the balls
-        public override void PostMake()
-        {
-            base.PostMake();
-            if (this.innerContainer?.Count == 0)
-            {
-                Thing thing = ThingMaker.MakeThing(ThingDefOf.Steel);
-                thing.stackCount = 20;
-                this.innerContainer.TryAdd(thing);
-            }
-        }
-
     }
 }
