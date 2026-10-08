@@ -150,15 +150,10 @@
     <defaultPlacingRot>North</defaultPlacingRot>
     <hasInteractionCell>false</hasInteractionCell>
     <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
-    <!-- <comps>
-      <li Class="CompProperties_EmptyStateGraphic">
-        <graphicData>
-          <texPath>Building/LargeCargoCrate/cargoContainer_Open</texPath>
-          <graphicClass>Graphic_Multi</graphicClass>
-          <shaderType>CutoutComplex</shaderType>
-          <drawSize>(3,5)</drawSize>
-        </graphicData>
+    <comps>
+      <li>
+        <compClass>CompColorable</compClass>
       </li>
-    </comps> -->
+    </comps>
   </ThingDef>
 </Defs>

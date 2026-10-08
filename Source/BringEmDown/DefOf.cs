@@ -15,6 +15,10 @@ namespace BringEmDown
 
         public static FactionBlacklist BED_FactionBlacklist;
 
+        public static ThingDef BED_LargeCargoContanier;
+
+        public static ThingDef BED_ExpensiveCargoCrate;
+
         static BEDDefOf()
         {
             DefOfHelper.EnsureInitializedInCtor(typeof(BEDDefOf));

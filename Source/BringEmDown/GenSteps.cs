@@ -16,16 +16,62 @@ namespace BringEmDown
         public override int SeedPart => 69696969;
         public override void Generate(Map map, GenStepParams parms)
         {
+            TraverseParms traverseParms = TraverseParms.For(TraverseMode.PassDoors);
             if (!RCellFinder.TryFindRandomCellNearTheCenterOfTheMapWith(
-                            (IntVec3 c) => c.Standable(map) && !c.Fogged(map) && c.GetRoom(map).TouchesMapEdge == false,
+                            (IntVec3 c) => c.Standable(map) && !c.Fogged(map) && !c.CloseToEdge(map, 50) && map.reachability.CanReachMapEdge(c, traverseParms),
                             map, out IntVec3 defendCenter))
             {
                 defendCenter = map.Center;
             }
 
             CrashMapParent mapParent = map.Parent as CrashMapParent;
-            
-            
+            Thing container = null;
+            float totalWeight = 0;
+            Thing expensiveContainer = null;
+
+            foreach (Thing thing in mapParent.thingsToScatter)
+            {
+                if (thing.MarketValue >= BringEmDownMod.settings.expensiveThreshold && thing.stackCount <= 100)
+                {
+                    expensiveContainer = ThingMaker.MakeThing(BEDDefOf.BED_ExpensiveCargoCrate);
+                    if (expensiveContainer is IThingHolder holder)
+                    {
+                        holder.GetDirectlyHeldThings().TryAddOrTransfer(thing);
+                    }
+                    IntVec3 spawnPos = CellFinder.RandomClosewalkCellNear(defendCenter, map, 15);
+                    GenSpawn.Spawn(expensiveContainer, spawnPos, map);
+                }
+                else
+                {
+                    if (container == null)
+                    {
+                        container = ThingMaker.MakeThing(BEDDefOf.BED_LargeCargoContanier);
+                        totalWeight = 0;
+                    }
+
+                    if (container is IThingHolder holder)
+                    {
+                        holder.GetDirectlyHeldThings().TryAddOrTransfer(thing);
+
+                        foreach (Thing item in holder.GetDirectlyHeldThings())
+                        {
+                            totalWeight += item.GetStatValue(StatDefOf.Mass)*item.stackCount;
+                        }
+
+                        if (totalWeight >= 25.5f)
+                        {
+                            RailgunUtility.TrySpawnLargeContainer(container, map, defendCenter);
+                            container = null;
+                        }
+                    }
+                }
+            }
+            if (container != null)
+            {
+                RailgunUtility.TrySpawnLargeContainer(container, map, defendCenter);
+                container = null;
+            }
+
 
 
         }
@@ -39,8 +85,9 @@ namespace BringEmDown
         TraverseParms traverseParms = TraverseParms.For(TraverseMode.ByPawn);
         public override void Generate(Map map, GenStepParams parms)
         {
+            TraverseParms traverseParms = TraverseParms.For(TraverseMode.PassDoors);
             if (!RCellFinder.TryFindRandomCellNearTheCenterOfTheMapWith(
-                            (IntVec3 c) => c.Walkable(map) && map.reachability.CanReachUnfogged(c, traverseParms) && !c.Fogged(map) && c.GetRoom(map).TouchesMapEdge == false,
+                            (IntVec3 c) => c.Standable(map) && !c.Fogged(map) && !c.CloseToEdge(map, 10) && map.reachability.CanReachMapEdge(c, traverseParms),
                             map, out IntVec3 defendCenter))
             {
                 defendCenter = map.Center;

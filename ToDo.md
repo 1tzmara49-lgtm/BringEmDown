@@ -1,7 +1,5 @@
 To do:
-* Graphics for large cargo crate
-* Make cargo crates openable + rotateable
-* Fix shadows
+* Fix large cargo crates not appearing
 * Add the ship ruins to the site
 * Add graphics to the gizmos
 * Add graphics to the site on the world map
