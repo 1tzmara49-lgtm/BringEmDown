@@ -1,9 +1,9 @@
 <Defs>
+<!-- im going to kill every person who says i vibecoded this shit just because of the comments -->
   <ThingDef ParentName="BuildingBase">
     <defName>BED_OrbitalRailcannon</defName>
     <label>orbital railcannon</label>
     <description>TBD</description>
-    <thingClass>Building_Crate</thingClass>
     <graphicData>
       <texPath>placeholderpng</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -151,8 +151,123 @@
     <hasInteractionCell>false</hasInteractionCell>
     <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
     <comps>
+    <!--No CompProperties_EmptyStateGraphic since it was kinda pissy about being colored so i just added it's functionality to thingClass -->
       <li>
         <compClass>CompColorable</compClass>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <!-- Weapon crate -->
+
+  <ThingDef ParentName="CrateBase">
+    <defName>BED_WeaponCrate</defName>
+    <label>weapon container</label>
+    <description>A secure container designed for storing weaponry.</description>
+    <thingClass>BringEmDown.BEDCargoCrate</thingClass>
+    <graphicData>
+      <texPath>placeholderpng</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(2,1)</drawSize>
+      <shadowData>
+        <volume>(2,0.5,1)</volume>
+      </shadowData>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>50</pathCost>
+    <blockWind>false</blockWind>
+    <fillPercent>0.5</fillPercent>
+    <canOverlapZones>false</canOverlapZones>
+    <statBases>
+      <MaxHitPoints>1000</MaxHitPoints>
+      <Flammability>0.6</Flammability>
+    </statBases>
+    <size>(2,1)</size>
+    <building>
+      <openingStartedSound>BuildingDestroyed_Metal_Small</openingStartedSound>
+      <destroySound>BuildingDestroyed_Metal_Small</destroySound>
+      <deconstructible>false</deconstructible>
+      <claimable>false</claimable>
+      <neverBuildable>true</neverBuildable>
+    </building>
+    <defaultPlacingRot>North</defaultPlacingRot>
+    <hasInteractionCell>false</hasInteractionCell>
+    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+    <comps>
+      <li Class="CompProperties_EmptyStateGraphic">
+        <graphicData>
+          <texPath>placeholderpng</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <shaderType>CutoutComplex</shaderType>
+          <drawSize>(2,1)</drawSize>
+          <shadowData>
+            <volume>(2,0.5,1)</volume>
+          </shadowData>
+        </graphicData>
+      </li>
+      <li Class="CompProperties_Hackable">
+        <defence>30000</defence>
+        <effectHacking>HackingTerminal</effectHacking>
+        <notHackedInspectString>Hack to unlock the crate.</notHackedInspectString>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <!-- Cryptosleep cargo crate -->
+
+  <ThingDef ParentName="CrateBase">
+    <defName>BED_CryptosleepCrate</defName>
+    <label>cryptosleep cargo crate</label>
+    <description>A secure container designed for storing living things via suspended animation for many years. Used by interstellar traders to store animals and prisoners</description>
+    <thingClass>BringEmDown.BEDCargoCrate</thingClass>
+    <graphicData>
+      <texPath>placeholderpng</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(2,2)</drawSize>
+      <shadowData>
+        <volume>(2,1,2)</volume>
+      </shadowData>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>Impassable</passability>
+    <pathCost>50</pathCost>
+    <blockWind>true</blockWind>
+    <fillPercent>1.0</fillPercent>
+    <canOverlapZones>false</canOverlapZones>
+    <statBases>
+      <MaxHitPoints>1000</MaxHitPoints>
+      <Flammability>0.6</Flammability>
+    </statBases>
+    <size>(2,2)</size>
+    <building>
+      <openingStartedSound>BuildingDestroyed_Metal_Small</openingStartedSound>
+      <destroySound>BuildingDestroyed_Metal_Small</destroySound>
+      <deconstructible>false</deconstructible>
+      <claimable>false</claimable>
+      <neverBuildable>true</neverBuildable>
+    </building>
+    <defaultPlacingRot>North</defaultPlacingRot>
+    <hasInteractionCell>true</hasInteractionCell>
+    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+    <comps>
+      <li Class="CompProperties_EmptyStateGraphic">
+        <graphicData>
+          <texPath>placeholderpng</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <shaderType>CutoutComplex</shaderType>
+          <drawSize>(2,2)</drawSize>
+          <shadowData>
+            <volume>(2,1,2)</volume>
+          </shadowData>
+        </graphicData>
+      </li>
+      <li Class="CompProperties_Hackable">
+        <defence>15000</defence>
+        <effectHacking>HackingTerminal</effectHacking>
+        <notHackedInspectString>Hack to unlock the crate.</notHackedInspectString>
       </li>
     </comps>
   </ThingDef>

@@ -19,6 +19,10 @@ namespace BringEmDown
 
         public static ThingDef BED_ExpensiveCargoCrate;
 
+        public static ThingDef BED_WeaponCrate;
+
+        public static ThingDef BED_CryptosleepCrate;
+
         static BEDDefOf()
         {
             DefOfHelper.EnsureInitializedInCtor(typeof(BEDDefOf));

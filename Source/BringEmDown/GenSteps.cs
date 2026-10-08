@@ -28,10 +28,36 @@ namespace BringEmDown
             Thing container = null;
             float totalWeight = 0;
             Thing expensiveContainer = null;
+            Thing weaponContainer = null;
+            Thing cryptoContainer = null;
 
             foreach (Thing thing in mapParent.thingsToScatter)
             {
-                if (thing.MarketValue >= BringEmDownMod.settings.expensiveThreshold && thing.stackCount <= 100)
+                // TBD: Mechanoid crate (?) for compatabiliy since putting mechanoids in cryptosleep is just stupid, might just spawn them as they are idk
+                // high priority!!!! if a living thing, place in this crate.
+                if (thing is Pawn pawn)
+                {
+                    cryptoContainer = ThingMaker.MakeThing(BEDDefOf.BED_CryptosleepCrate);
+                    if (cryptoContainer is IThingHolder holder)
+                    {
+                        holder.GetDirectlyHeldThings().TryAddOrTransfer(thing);
+                    }
+                    Utility.TrySpawnContainer(cryptoContainer, map, defendCenter);
+                    cryptoContainer = null;
+                }
+                // if is a weapon(s) shove it inside the weapon crate.
+                else if (thing.def.IsWeapon && thing.MarketValue >= 110) // 110 silver price check so the players wont hack the crate just to get a fucking recursive bow
+                {
+                    weaponContainer = ThingMaker.MakeThing(BEDDefOf.BED_WeaponCrate);
+                    if (weaponContainer is IThingHolder holder)
+                    {
+                        holder.GetDirectlyHeldThings().TryAddOrTransfer(thing);
+                    }
+                    Utility.TrySpawnContainer(weaponContainer, map, defendCenter);
+                    weaponContainer = null;
+                }
+                //if expensive AND not bulk bullshit (like 7 morbillion plasteel units) == get into the expensive crate.
+                else if (thing.MarketValue * thing.stackCount >= BringEmDownMod.settings.expensiveThreshold && thing.stackCount <= 50)
                 {
                     expensiveContainer = ThingMaker.MakeThing(BEDDefOf.BED_ExpensiveCargoCrate);
                     if (expensiveContainer is IThingHolder holder)
@@ -40,7 +66,9 @@ namespace BringEmDown
                     }
                     IntVec3 spawnPos = CellFinder.RandomClosewalkCellNear(defendCenter, map, 15);
                     GenSpawn.Spawn(expensiveContainer, spawnPos, map);
+                    expensiveContainer = null;
                 }
+                // shove whatever else inside a large crate. if over a weight threshold (whatever the fuck i changed it to) spawn the cargo.
                 else
                 {
                     if (container == null)
@@ -55,12 +83,12 @@ namespace BringEmDown
 
                         foreach (Thing item in holder.GetDirectlyHeldThings())
                         {
-                            totalWeight += item.GetStatValue(StatDefOf.Mass)*item.stackCount;
+                            totalWeight += item.GetStatValue(StatDefOf.Mass) * item.stackCount;
                         }
 
                         if (totalWeight >= 25.5f)
                         {
-                            RailgunUtility.TrySpawnLargeContainer(container, map, defendCenter);
+                            Utility.TrySpawnContainer(container, map, defendCenter);
                             container = null;
                         }
                     }
@@ -68,7 +96,7 @@ namespace BringEmDown
             }
             if (container != null)
             {
-                RailgunUtility.TrySpawnLargeContainer(container, map, defendCenter);
+                Utility.TrySpawnContainer(container, map, defendCenter);
                 container = null;
             }
 
@@ -103,7 +131,7 @@ namespace BringEmDown
             CrashMapParent mapParent = map.Parent as CrashMapParent;
             List<Thing> thingsToScater = mapParent.thingsToScatter;
 
-            float points = RailgunUtility.GetValueFromList(thingsToScater);
+            float points = Utility.GetValueFromList(thingsToScater);
 
             //if (faction.def.pawnGroupMakers != null && faction.def.pawnGroupMakers.NullOrEmpty())
             //{

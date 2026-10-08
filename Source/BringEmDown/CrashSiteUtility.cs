@@ -11,6 +11,7 @@ namespace BringEmDown
 {
     public class CrashSiteUtility
     {
+        // For general utility look in Utility, this one is specifically for the site gizmos. 
         public static void Attack(Caravan caravan, MapParent site)
         {
             if (!site.HasMap)

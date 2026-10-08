@@ -9,7 +9,7 @@ using Verse.Noise;
 
 namespace BringEmDown
 {
-    public static class RailgunUtility
+    public static class Utility
     {
         public static List<TradeShip> GetAllTradeships(Map map)
         {
@@ -93,7 +93,7 @@ namespace BringEmDown
             return clearRotations.Count > 0;
         }
 
-        public static void TrySpawnLargeContainer(Thing crateToSpawn, Map map, IntVec3 defendCenter)
+        public static void TrySpawnContainer(Thing crateToSpawn, Map map, IntVec3 defendCenter)
         {
             int attempts = 0;
             while (!crateToSpawn.Spawned && attempts <= 50)
@@ -102,7 +102,7 @@ namespace BringEmDown
                 if (TryGetClearRotation(crateToSpawn, spawnPos, map, out List<Rot4> safeRot))
                 {
                     Thing crate = GenSpawn.Spawn(crateToSpawn, spawnPos, map, safeRot.RandomElement());
-                    crate.DrawColor = map.ParentFaction?.Color ?? UnityEngine.Color.grey;
+                    if (crate.HasComp<CompColorable>()) crate.DrawColor = map.ParentFaction?.Color ?? UnityEngine.Color.grey;
                     return;
                 }
                 attempts++;

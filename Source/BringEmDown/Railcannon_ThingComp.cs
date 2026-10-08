@@ -96,7 +96,7 @@ namespace BringEmDown
                 Faction.OfPlayer.TryAffectGoodwillWith(faction, -100, canSendMessage: true, canSendHostilityLetter: true, reason: reason);
             }
 
-            List<Thing> finalGoods = RailgunUtility.GetGoods(currentTarget);
+            List<Thing> finalGoods = Utility.GetGoods(currentTarget);
 
             slate.Set("targetFaction", faction);
             slate.Set("thingsToScatter", finalGoods);
@@ -109,7 +109,7 @@ namespace BringEmDown
         {
             Map map = parent.Map;
 
-            List<TradeShip> availibleShips = RailgunUtility.GetAllTradeships(map);
+            List<TradeShip> availibleShips = Utility.GetAllTradeships(map);
 
             if (availibleShips.NullOrEmpty())
             {
