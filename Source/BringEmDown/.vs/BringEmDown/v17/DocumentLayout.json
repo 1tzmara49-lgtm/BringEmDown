@@ -3,36 +3,40 @@
   "WorkspaceRootPath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\BringEmDown\\Source\\BringEmDown\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7922912B-DB47-47F7-8E01-E860B0C13E24}|BringEmDown.csproj|C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\BringEmDown\\Source\\BringEmDown\\thingclass_bedcargocrate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7922912B-DB47-47F7-8E01-E860B0C13E24}|BringEmDown.csproj|solutionrelative:thingclass_bedcargocrate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7922912B-DB47-47F7-8E01-E860B0C13E24}|BringEmDown.csproj|C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\BringEmDown\\Source\\BringEmDown\\thingclass_bedlargecargo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7922912B-DB47-47F7-8E01-E860B0C13E24}|BringEmDown.csproj|solutionrelative:thingclass_bedlargecargo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7922912B-DB47-47F7-8E01-E860B0C13E24}|BringEmDown.csproj|C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\BringEmDown\\Source\\BringEmDown\\utility.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7922912B-DB47-47F7-8E01-E860B0C13E24}|BringEmDown.csproj|solutionrelative:utility.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7922912B-DB47-47F7-8E01-E860B0C13E24}|BringEmDown.csproj|c:\\program files (x86)\\steam\\steamapps\\common\\rimworld\\mods\\bringemdown\\source\\bringemdown\\gensteps.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7922912B-DB47-47F7-8E01-E860B0C13E24}|BringEmDown.csproj|C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\BringEmDown\\Source\\BringEmDown\\gensteps.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7922912B-DB47-47F7-8E01-E860B0C13E24}|BringEmDown.csproj|solutionrelative:gensteps.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7922912B-DB47-47F7-8E01-E860B0C13E24}|BringEmDown.csproj|C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\BringEmDown\\Source\\BringEmDown\\factionblacklist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7922912B-DB47-47F7-8E01-E860B0C13E24}|BringEmDown.csproj|solutionrelative:factionblacklist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7922912B-DB47-47F7-8E01-E860B0C13E24}|BringEmDown.csproj|C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\BringEmDown\\Source\\BringEmDown\\defof.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7922912B-DB47-47F7-8E01-E860B0C13E24}|BringEmDown.csproj|solutionrelative:defof.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7922912B-DB47-47F7-8E01-E860B0C13E24}|BringEmDown.csproj|C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\BringEmDown\\Source\\BringEmDown\\crashsiteutility.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7922912B-DB47-47F7-8E01-E860B0C13E24}|BringEmDown.csproj|solutionrelative:crashsiteutility.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{7922912B-DB47-47F7-8E01-E860B0C13E24}|BringEmDown.csproj|C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\BringEmDown\\Source\\BringEmDown\\mapparent_crashsite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7922912B-DB47-47F7-8E01-E860B0C13E24}|BringEmDown.csproj|solutionrelative:mapparent_crashsite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7922912B-DB47-47F7-8E01-E860B0C13E24}|BringEmDown.csproj|C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\BringEmDown\\Source\\BringEmDown\\defof.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7922912B-DB47-47F7-8E01-E860B0C13E24}|BringEmDown.csproj|solutionrelative:defof.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7922912B-DB47-47F7-8E01-E860B0C13E24}|BringEmDown.csproj|C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\BringEmDown\\Source\\BringEmDown\\factionblacklist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7922912B-DB47-47F7-8E01-E860B0C13E24}|BringEmDown.csproj|solutionrelative:factionblacklist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7922912B-DB47-47F7-8E01-E860B0C13E24}|BringEmDown.csproj|C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\BringEmDown\\Source\\BringEmDown\\thingclass_bedlargecargo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7922912B-DB47-47F7-8E01-E860B0C13E24}|BringEmDown.csproj|solutionrelative:thingclass_bedlargecargo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{7922912B-DB47-47F7-8E01-E860B0C13E24}|BringEmDown.csproj|C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\BringEmDown\\Source\\BringEmDown\\railcannon_thingcomp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7922912B-DB47-47F7-8E01-E860B0C13E24}|BringEmDown.csproj|solutionrelative:railcannon_thingcomp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7922912B-DB47-47F7-8E01-E860B0C13E24}|BringEmDown.csproj|c:\\program files (x86)\\steam\\steamapps\\common\\rimworld\\mods\\bringemdown\\source\\bringemdown\\thingclass_bedcargocrate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7922912B-DB47-47F7-8E01-E860B0C13E24}|BringEmDown.csproj|solutionrelative:thingclass_bedcargocrate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7922912B-DB47-47F7-8E01-E860B0C13E24}|BringEmDown.csproj|C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\BringEmDown\\Source\\BringEmDown\\utility.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7922912B-DB47-47F7-8E01-E860B0C13E24}|BringEmDown.csproj|solutionrelative:utility.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7922912B-DB47-47F7-8E01-E860B0C13E24}|BringEmDown.csproj|C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\BringEmDown\\Source\\BringEmDown\\questnode_setupcrashsite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -45,10 +49,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{7922912B-DB47-47F7-8E01-E860B0C13E24}|BringEmDown.csproj|C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\BringEmDown\\Source\\BringEmDown\\mod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7922912B-DB47-47F7-8E01-E860B0C13E24}|BringEmDown.csproj|solutionrelative:mod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7922912B-DB47-47F7-8E01-E860B0C13E24}|BringEmDown.csproj|C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\BringEmDown\\Source\\BringEmDown\\mapparent_crashsite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7922912B-DB47-47F7-8E01-E860B0C13E24}|BringEmDown.csproj|solutionrelative:mapparent_crashsite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7922912B-DB47-47F7-8E01-E860B0C13E24}|BringEmDown.csproj|C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\BringEmDown\\Source\\BringEmDown\\questnode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -69,7 +69,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -77,32 +77,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
+              "Title": "ThingClass_BEDCargoCrate.cs",
+              "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\BringEmDown\\Source\\BringEmDown\\ThingClass_BEDCargoCrate.cs",
+              "RelativeDocumentMoniker": "ThingClass_BEDCargoCrate.cs",
+              "ToolTip": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\BringEmDown\\Source\\BringEmDown\\ThingClass_BEDCargoCrate.cs",
+              "RelativeToolTip": "ThingClass_BEDCargoCrate.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAA4AAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-29T11:56:03.39Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "GenSteps.cs",
               "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\BringEmDown\\Source\\BringEmDown\\GenSteps.cs",
               "RelativeDocumentMoniker": "GenSteps.cs",
               "ToolTip": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\BringEmDown\\Source\\BringEmDown\\GenSteps.cs",
               "RelativeToolTip": "GenSteps.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAowCwAAAAtAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-19T11:03:13.292Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Mod.cs",
-              "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\BringEmDown\\Source\\BringEmDown\\Mod.cs",
-              "RelativeDocumentMoniker": "Mod.cs",
-              "ToolTip": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\BringEmDown\\Source\\BringEmDown\\Mod.cs",
-              "RelativeToolTip": "Mod.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAAACcAAAA+AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-15T12:11:02.4Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "ThingClass_BEDLargeCargo.cs",
               "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\BringEmDown\\Source\\BringEmDown\\ThingClass_BEDLargeCargo.cs",
               "RelativeDocumentMoniker": "ThingClass_BEDLargeCargo.cs",
@@ -115,19 +116,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "QuestNode_SetupCrashsite.cs",
-              "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\BringEmDown\\Source\\BringEmDown\\QuestNode_SetupCrashsite.cs",
-              "RelativeDocumentMoniker": "QuestNode_SetupCrashsite.cs",
-              "ToolTip": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\BringEmDown\\Source\\BringEmDown\\QuestNode_SetupCrashsite.cs",
-              "RelativeToolTip": "QuestNode_SetupCrashsite.cs",
-              "ViewState": "AgIAACoAAAAAAAAAAAAowDUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-23T11:40:36.648Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "ModSettings.cs",
               "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\BringEmDown\\Source\\BringEmDown\\ModSettings.cs",
               "RelativeDocumentMoniker": "ModSettings.cs",
@@ -139,7 +128,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
               "Title": "DefOf.cs",
               "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\BringEmDown\\Source\\BringEmDown\\DefOf.cs",
               "RelativeDocumentMoniker": "DefOf.cs",
@@ -147,11 +136,12 @@
               "RelativeToolTip": "DefOf.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-17T07:09:24.021Z"
+              "WhenOpened": "2026-09-17T07:09:24.021Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 6,
               "Title": "Railcannon_ThingComp.cs",
               "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\BringEmDown\\Source\\BringEmDown\\Railcannon_ThingComp.cs",
               "RelativeDocumentMoniker": "Railcannon_ThingComp.cs",
@@ -159,24 +149,12 @@
               "RelativeToolTip": "Railcannon_ThingComp.cs",
               "ViewState": "AgIAAF4AAAAAAAAAAAAwwG8AAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-15T09:11:30.615Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ThingClass_BEDCargoCrate.cs",
-              "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\BringEmDown\\Source\\BringEmDown\\ThingClass_BEDCargoCrate.cs",
-              "RelativeDocumentMoniker": "ThingClass_BEDCargoCrate.cs",
-              "ToolTip": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\BringEmDown\\Source\\BringEmDown\\ThingClass_BEDCargoCrate.cs",
-              "RelativeToolTip": "ThingClass_BEDCargoCrate.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-29T11:56:03.39Z",
+              "WhenOpened": "2026-09-15T09:11:30.615Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 2,
               "Title": "MapParent_Crashsite.cs",
               "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\BringEmDown\\Source\\BringEmDown\\MapParent_Crashsite.cs",
               "RelativeDocumentMoniker": "MapParent_Crashsite.cs",
@@ -184,7 +162,58 @@
               "RelativeToolTip": "MapParent_Crashsite.cs",
               "ViewState": "AgIAAD4AAAAAAAAAAAAIwGYAAAB3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-22T08:28:27.906Z"
+              "WhenOpened": "2026-09-22T08:28:27.906Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FactionBlacklist.cs",
+              "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\BringEmDown\\Source\\BringEmDown\\FactionBlacklist.cs",
+              "RelativeDocumentMoniker": "FactionBlacklist.cs",
+              "ToolTip": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\BringEmDown\\Source\\BringEmDown\\FactionBlacklist.cs",
+              "RelativeToolTip": "FactionBlacklist.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-29T10:04:36.139Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CrashSiteUtility.cs",
+              "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\BringEmDown\\Source\\BringEmDown\\CrashSiteUtility.cs",
+              "RelativeDocumentMoniker": "CrashSiteUtility.cs",
+              "ToolTip": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\BringEmDown\\Source\\BringEmDown\\CrashSiteUtility.cs",
+              "RelativeToolTip": "CrashSiteUtility.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-25T09:48:11.596Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "QuestNode_SetupCrashsite.cs",
+              "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\BringEmDown\\Source\\BringEmDown\\QuestNode_SetupCrashsite.cs",
+              "RelativeDocumentMoniker": "QuestNode_SetupCrashsite.cs",
+              "ToolTip": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\BringEmDown\\Source\\BringEmDown\\QuestNode_SetupCrashsite.cs",
+              "RelativeToolTip": "QuestNode_SetupCrashsite.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAowDUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-23T11:40:36.648Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Mod.cs",
+              "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\BringEmDown\\Source\\BringEmDown\\Mod.cs",
+              "RelativeDocumentMoniker": "Mod.cs",
+              "ToolTip": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\BringEmDown\\Source\\BringEmDown\\Mod.cs",
+              "RelativeToolTip": "Mod.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAACcAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-15T12:11:02.4Z"
             },
             {
               "$type": "Document",
@@ -200,31 +229,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "CrashSiteUtility.cs",
-              "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\BringEmDown\\Source\\BringEmDown\\CrashSiteUtility.cs",
-              "RelativeDocumentMoniker": "CrashSiteUtility.cs",
-              "ToolTip": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\BringEmDown\\Source\\BringEmDown\\CrashSiteUtility.cs",
-              "RelativeToolTip": "CrashSiteUtility.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAQwBkAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-25T09:48:11.596Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "FactionBlacklist.cs",
-              "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\BringEmDown\\Source\\BringEmDown\\FactionBlacklist.cs",
-              "RelativeDocumentMoniker": "FactionBlacklist.cs",
-              "ToolTip": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\BringEmDown\\Source\\BringEmDown\\FactionBlacklist.cs",
-              "RelativeToolTip": "FactionBlacklist.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-29T10:04:36.139Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 8,
               "Title": "Utility.cs",
               "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\BringEmDown\\Source\\BringEmDown\\Utility.cs",
               "RelativeDocumentMoniker": "Utility.cs",
@@ -232,8 +237,7 @@
               "RelativeToolTip": "Utility.cs",
               "ViewState": "AgIAAE4AAAAAAAAAAAAnwF8AAABfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-15T09:30:00.016Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-15T09:30:00.016Z"
             },
             {
               "$type": "Document",
