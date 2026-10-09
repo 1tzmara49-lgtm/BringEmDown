@@ -50,13 +50,13 @@
 
   <GenStepDef>
     <defName>BED_GenStep_SpawnSurvivors</defName>
-    <order>510</order>
+    <order>1650</order>
     <genStep Class="BringEmDown.GenerateSurvivors" />
   </GenStepDef>
 
   <GenStepDef>
     <defName>BED_GenStep_ScatterGoods</defName>
-    <order>550</order>
+    <order>1700</order>
     <genStep Class="BringEmDown.ScatterGoods" />
   </GenStepDef>
 
