@@ -168,7 +168,7 @@
     <graphicData>
       <texPath>placeholderpng</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
-      <shaderType>CutoutComplex</shaderType>
+      <shaderType>Cutout</shaderType>
       <drawSize>(2,1)</drawSize>
       <shadowData>
         <volume>(2,0.5,1)</volume>
@@ -200,7 +200,7 @@
         <graphicData>
           <texPath>placeholderpng</texPath>
           <graphicClass>Graphic_Multi</graphicClass>
-          <shaderType>CutoutComplex</shaderType>
+          <shaderType>Cutout</shaderType>
           <drawSize>(2,1)</drawSize>
           <shadowData>
             <volume>(2,0.5,1)</volume>
@@ -223,12 +223,12 @@
     <description>A secure container designed for storing living things via suspended animation for many years. Used by interstellar traders to store animals and prisoners</description>
     <thingClass>BringEmDown.BEDCargoCrate</thingClass>
     <graphicData>
-      <texPath>placeholderpng</texPath>
-      <graphicClass>Graphic_Multi</graphicClass>
-      <shaderType>CutoutComplex</shaderType>
+      <texPath>Building/CryptosleepCargoCrate/CryptosleepCargoCrate_closed</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Cutout</shaderType>
       <drawSize>(2,2)</drawSize>
       <shadowData>
-        <volume>(2,1,2)</volume>
+        <volume>(1.9,1,1.9)</volume>
       </shadowData>
     </graphicData>
     <altitudeLayer>Building</altitudeLayer>
@@ -249,15 +249,16 @@
       <claimable>false</claimable>
       <neverBuildable>true</neverBuildable>
     </building>
+    <rotatable>false</rotatable>
     <defaultPlacingRot>North</defaultPlacingRot>
-    <hasInteractionCell>true</hasInteractionCell>
+    <!-- <hasInteractionCell>true</hasInteractionCell> -->
     <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
     <comps>
       <li Class="CompProperties_EmptyStateGraphic">
         <graphicData>
-          <texPath>placeholderpng</texPath>
-          <graphicClass>Graphic_Multi</graphicClass>
-          <shaderType>CutoutComplex</shaderType>
+        <texPath>Building/CryptosleepCargoCrate/CryptosleepCargoCrate_open</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+          <shaderType>Cutout</shaderType>
           <drawSize>(2,2)</drawSize>
           <shadowData>
             <volume>(2,1,2)</volume>

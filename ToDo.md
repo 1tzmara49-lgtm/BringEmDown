@@ -1,5 +1,6 @@
 To do:
-* Fix large cargo crates not appearing
+* Add weapon crate
+* Add cryptosleep container
 * Add the ship ruins to the site
 * Add graphics to the gizmos
 * Add graphics to the site on the world map

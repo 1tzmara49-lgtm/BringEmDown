@@ -83,7 +83,7 @@
               "RelativeDocumentMoniker": "GenSteps.cs",
               "ToolTip": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\BringEmDown\\Source\\BringEmDown\\GenSteps.cs",
               "RelativeToolTip": "GenSteps.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAnwCcAAABYAAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAAAowC0AAABDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-19T11:03:13.292Z",
               "EditorCaption": ""
@@ -98,8 +98,7 @@
               "RelativeToolTip": "Mod.cs",
               "ViewState": "AgIAAB4AAAAAAAAAAAAAACcAAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-15T12:11:02.4Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-15T12:11:02.4Z"
             },
             {
               "$type": "Document",
@@ -111,8 +110,7 @@
               "RelativeToolTip": "ThingClass_BEDLargeCargo.cs",
               "ViewState": "AgIAAB0AAAAAAAAAAAAAABAAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-06T10:59:34.464Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-06T10:59:34.464Z"
             },
             {
               "$type": "Document",
@@ -124,8 +122,7 @@
               "RelativeToolTip": "QuestNode_SetupCrashsite.cs",
               "ViewState": "AgIAACoAAAAAAAAAAAAowDUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-23T11:40:36.648Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-23T11:40:36.648Z"
             },
             {
               "$type": "Document",
@@ -137,8 +134,7 @@
               "RelativeToolTip": "ModSettings.cs",
               "ViewState": "AgIAAA4AAAAAAAAAAAAQwBEAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-15T12:12:43.343Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-15T12:12:43.343Z"
             },
             {
               "$type": "Document",
@@ -150,8 +146,7 @@
               "RelativeToolTip": "DefOf.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-17T07:09:24.021Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-17T07:09:24.021Z"
             },
             {
               "$type": "Document",
@@ -163,8 +158,7 @@
               "RelativeToolTip": "Railcannon_ThingComp.cs",
               "ViewState": "AgIAAF4AAAAAAAAAAAAwwG8AAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-15T09:11:30.615Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-15T09:11:30.615Z"
             },
             {
               "$type": "Document",
@@ -176,8 +170,7 @@
               "RelativeToolTip": "ThingClass_BEDCargoCrate.cs",
               "ViewState": "AgIAABgAAAAAAAAAAAAowAsAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-29T11:56:03.39Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-29T11:56:03.39Z"
             },
             {
               "$type": "Document",
@@ -189,8 +182,7 @@
               "RelativeToolTip": "MapParent_Crashsite.cs",
               "ViewState": "AgIAAD4AAAAAAAAAAAAIwGYAAAB3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-22T08:28:27.906Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-22T08:28:27.906Z"
             },
             {
               "$type": "Document",
@@ -214,8 +206,7 @@
               "RelativeToolTip": "CrashSiteUtility.cs",
               "ViewState": "AgIAAA4AAAAAAAAAAAAQwBkAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-25T09:48:11.596Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-25T09:48:11.596Z"
             },
             {
               "$type": "Document",
@@ -227,8 +218,7 @@
               "RelativeToolTip": "FactionBlacklist.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-29T10:04:36.139Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-29T10:04:36.139Z"
             },
             {
               "$type": "Document",
@@ -240,8 +230,7 @@
               "RelativeToolTip": "Utility.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-15T09:30:00.016Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-15T09:30:00.016Z"
             },
             {
               "$type": "Document",
