@@ -1,6 +1,6 @@
 To do:
-* Add weapon crate
-* Add cryptosleep container
+* Finish up the weapon crate graphics
+* Fix enemies spawning on fogged territory
 * Add the ship ruins to the site
 * Add graphics to the gizmos
 * Add graphics to the site on the world map

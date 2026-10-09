@@ -92,6 +92,10 @@
     <size>(1,1)</size>
     <building>
       <destroySound>BuildingDestroyed_Metal_Big</destroySound>
+      <paintable>true</paintable>
+      <deconstructible>false</deconstructible>
+      <claimable>false</claimable>
+      <neverBuildable>true</neverBuildable>
     </building>
     <defaultPlacingRot>North</defaultPlacingRot>
     <hasInteractionCell>false</hasInteractionCell>
@@ -166,7 +170,7 @@
     <description>A secure container designed for storing weaponry.</description>
     <thingClass>BringEmDown.BEDCargoCrate</thingClass>
     <graphicData>
-      <texPath>placeholderpng</texPath>
+      <texPath>Building/WeaponCrate/weaponContainer_Closed</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
       <shaderType>Cutout</shaderType>
       <drawSize>(2,1)</drawSize>
@@ -198,7 +202,7 @@
     <comps>
       <li Class="CompProperties_EmptyStateGraphic">
         <graphicData>
-          <texPath>placeholderpng</texPath>
+        <texPath>Building/WeaponCrate/weaponContainer_Open</texPath>
           <graphicClass>Graphic_Multi</graphicClass>
           <shaderType>Cutout</shaderType>
           <drawSize>(2,1)</drawSize>
@@ -243,7 +247,6 @@
     </statBases>
     <size>(2,2)</size>
     <building>
-      <openingStartedSound>BuildingDestroyed_Metal_Small</openingStartedSound>
       <destroySound>BuildingDestroyed_Metal_Small</destroySound>
       <deconstructible>false</deconstructible>
       <claimable>false</claimable>
