@@ -1,6 +1,104 @@
 <Defs>
 <!-- im going to kill every person who says i vibecoded this shit just because of the comments -->
-  <ThingDef ParentName="BuildingBase">
+
+<!-- the railcannon (gun, yes im putting it in the buildings def, no im not making a separate file just for this.)-->
+
+  <!-- the gun itself -->
+
+    <ThingDef ParentName="BaseWeaponTurret">
+    <defName>BED_OrbitalRailcannon_Gun</defName>
+    <label>railcannon</label>
+    <description>A large cannon designed for firing high velocity armor piercing rails. Can target both on-ground threats and targets in orbit.</description>
+    <graphicData>
+      <texPath>Building/Railcannon/RailcannonGun</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <AccuracyTouch>0.0</AccuracyTouch>
+      <AccuracyShort>0.1</AccuracyShort>
+      <AccuracyMedium>0.76</AccuracyMedium>
+      <AccuracyLong>0.95</AccuracyLong>
+      <RangedWeapon_Cooldown>60.5</RangedWeapon_Cooldown>
+      <DeteriorationRate>0</DeteriorationRate>
+      <Mass>90</Mass>
+      <Flammability>0</Flammability>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <defaultProjectile>Bullet_AutocannonTurret</defaultProjectile>
+        <warmupTime>10</warmupTime>
+        <minRange>20.0</minRange>
+        <range>70.0</range>
+        <soundCast>Shot_Autocannon</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>24</muzzleFlashScale>
+        <consumeFuelPerShot>1</consumeFuelPerShot>
+      </li>
+    </verbs>
+  </ThingDef>
+
+  <!-- the base -->
+  
+  <ThingDef ParentName="BuildingBase" Name="RailcannonTurret" Abstract="True"> 
+    <thingClass>Building_TurretGun</thingClass>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <drawHighlight>true</drawHighlight>
+    <drawHighlightOnlyForHostile>true</drawHighlightOnlyForHostile>
+    <graphicData>
+      <texPath>Things/Building/Security/TurretHeavy_Base</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1.5, 1.5)</drawSize>
+      <drawOffset>(0,0,-0.1)</drawOffset>
+      <damageData>
+        <rect>(0.2,0.2,0.6,0.6)</rect>
+      </damageData>
+      <shadowData>
+        <volume>(1.5,0.35,1.4)</volume>
+        <offset>(0,0,-0.05)</offset>
+      </shadowData>
+    </graphicData>    
+    <altitudeLayer>Building</altitudeLayer>
+    <stealable>false</stealable>
+    <rotatable>false</rotatable>
+    <size>(2,2)</size>
+    <statBases>
+      <MaxHitPoints>380</MaxHitPoints>
+      <Flammability>0.7</Flammability>
+      <WorkToBuild>15000</WorkToBuild>
+      <Mass>100</Mass>
+      <Beauty>-20</Beauty>
+    </statBases>
+    <tickerType>Normal</tickerType>
+    <passability>PassThroughOnly</passability>
+    <pathCost>50</pathCost>
+    <fillPercent>0.5</fillPercent>
+    <hasTooltip>true</hasTooltip>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <designationCategory>Security</designationCategory>
+    <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+    <building>
+      <ai_combatDangerous>true</ai_combatDangerous>
+      <turretTopDrawSize>2.7</turretTopDrawSize>
+      <turretTopOffset>(0, 0.05)</turretTopOffset>
+    </building>
+    <placeWorkers>
+      <li>PlaceWorker_TurretTop</li>
+      <li>PlaceWorker_ShowTurretRadius</li>
+    </placeWorkers>
+    <designationHotKey>Misc3</designationHotKey>    
+    <uiIconScale>0.95</uiIconScale>
+    <comps>
+      <li Class="CompProperties_Stunnable">
+        <affectedDamageDefs>
+          <li>Stun</li>
+          <li>EMP</li>
+        </affectedDamageDefs>
+      </li>
+    </comps>
+  </ThingDef>
+  
+  <ThingDef ParentName="RailcannonTurret">
     <defName>BED_OrbitalRailcannon</defName>
     <label>orbital railcannon</label>
     <description>TBD</description>
@@ -29,9 +127,10 @@
       <WorkToBuild>2200</WorkToBuild>
       <Flammability>0.6</Flammability>
     </statBases>
-    <size>(3,2)</size>
+    <size>(2,2)</size>
     <building>
       <destroySound>BuildingDestroyed_Metal_Big</destroySound>
+      <turretGunDef>BED_OrbitalRailcannon_Gun</turretGunDef>
     </building>
     <costList>
       <Steel>120</Steel>
